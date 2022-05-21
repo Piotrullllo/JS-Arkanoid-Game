@@ -1,0 +1,106 @@
+*{
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+body{
+    background-color: black;
+}
+#canvas{
+    background-color: rgb(45, 45, 45);
+}
+.canvas-overlay{
+    width: 1280px;
+    height: 720px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    overflow: hidden;
+}
+.menu{
+    position: relative;
+    top: -496px;
+    left: 399px;
+    width: 480px;
+    height: 270px;
+    border: 2px solid white;
+    border-radius: 20px;
+    text-align: center;
+    background-image: url('../images/background.png');
+    background-size: 100%;
+    background-repeat: no-repeat;
+}
+#pause-screen, #lose-screen, #win-screen{
+    display: none;
+}
+.menu h1{
+    background: rgba(0,0,0,1);
+    background: linear-gradient(180deg, rgba(0,0,0,1) 1%, rgba(0,0,0,0) 100%);
+    border-radius: 20px 20px 0  0;
+    padding: 15px 10px 20px 10px;
+}
+.menu button{
+    margin: 5px;
+    width: 300px;
+    height: 45px;
+    font-size: 22px;
+    border: 1px solid dimgray;
+    color: white;
+    background-color: rgb(45,45,45);
+    border-radius: 15px;
+    cursor: pointer;
+    transition: background .25s, color .25s, border .25s;
+}
+.menu button:focus, .menu button:hover{
+    border: 1px solid white;
+    background-color: rgb(200,200,200);
+    color: black;
+}
+#game-data, #power-up-data{
+    width: 1280px;
+    display: flex;
+    justify-content: space-between;
+}
+#game-data{
+    visibility: hidden;
+    position: fixed;
+    top: 0;
+    left: 0;
+}
+#power-up-data{
+    position: fixed;
+    top: 692px;
+    left: 0;
+}
+#power-up-data > div{
+    width: 50%;
+}
+#picked-power-up, #slowdown-time{
+    opacity: 1;
+    transition: opacity .3s;
+}
+#picked-power-up{
+    text-align: right;
+}
+#game-data > div{
+    width: 33%;
+}
+#power-up-data > div{
+    width: 100%;
+}
+h2{
+    color: white;
+}
+#level{
+    text-align: center;
+}
+#health{
+    color: red;
+    letter-spacing: 5px;
+    text-align: right;
+}
+.endScore{
+    margin-top: -5px;
+    padding-bottom: 20px;
+}

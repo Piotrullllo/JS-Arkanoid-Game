@@ -6,9 +6,54 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Arkanoid</title>
     <link rel="stylesheet" href="style/style.css">
+    <script defer src="js/defaults.js"></script>
+    <script defer src="js/interface.js"></script>
+    <script defer src="js/main.js"></script>
 </head>
 <body>
-    
-    <script defer src="js/main.js"></script>
+    <div class="canvas-overlay">
+        <canvas id="canvas" width="1280" height="720"></canvas>
+        <div id="game-data">
+            <div><h2 id="score">Score: <span class="points">0</span></h2></div>
+            <div><h2 id="level">Level: <span id="lvl">1</span></h2></div>
+            <div><h2 id="health">❤❤❤</h2></div>
+        </div>
+        <div class="menu" id="welcome-screen">
+            <h1>
+                <span style="color: red;">A</span><span style="color: orange;">r</span><span style="color: yellow;">k</span><span style="color: rgb(163, 236, 17);">a</span><span style="color: rgb(0, 182, 0);">n</span><span style="color: cyan;">o</span><span style="color: lightblue;">i</span><span style="color: violet;">d</span>
+            </h1>
+            <button id="b-start">Play</button>
+            <a href="https://github.com/Piotrullllo/JS-Arkanoid-Game" tabindex="-1"><button id="b-link">About Project</button></a>
+            <button class="b-sound">Sound: <span>on</span></button>
+        </div>
+        <div class="menu" id="pause-screen">
+            <h1>
+                <span style="color: red;">A</span><span style="color: orange;">r</span><span style="color: yellow;">k</span><span style="color: rgb(163, 236, 17);">a</span><span style="color: rgb(0, 182, 0);">n</span><span style="color: cyan;">o</span><span style="color: lightblue;">i</span><span style="color: violet;">d</span>
+            </h1>
+            <button id="b-pause-end">Resume</button>
+            <button class="b-quit">Back to menu</button>
+            <button class="b-sound">Sound: <span>on</span></button>
+        </div>
+        <div class="menu" id="lose-screen">
+            <h1>
+                <span style="color: red;">G</span><span style="color: orange;">a</span><span style="color: yellow;">m</span><span style="color: rgb(163, 236, 17);">e</span> <span style="color: rgb(0, 182, 0);">o</span><span style="color: cyan;">v</span><span style="color: lightblue;">e</span><span style="color: violet;">r</span>
+            </h1>
+            <h2 class="endScore">Score: <span class="points">0</span></h2>
+            <button id="b-new-game">New Game</button>
+            <button class="b-quit">Back to menu</button>
+        </div>
+        <div class="menu" id="win-screen">
+            <h1>
+                <span style="color: red;">C</span><span style="color: orange;">l</span><span style="color: yellow;">e</span><span style="color: rgb(163, 236, 17);">a</span><span style="color: rgb(0, 182, 0);">r</span><span style="color: cyan;">e</span><span style="color: lightblue;">d</span><span style="color: violet;">!</span>
+            </h1>
+            <h2 class="endScore">Score: <span class="points">0</span></h2>
+            <button id="b-continue">Next level</button>
+            <button class="b-quit">Back to menu</button>
+        </div>
+        <div id="power-up-data">
+            <div><h2 id="slowdown-time"></h2></div>
+            <div><h2 id="picked-power-up"></h2></div>
+        </div>
+    </div>
 </body>
 </html>
